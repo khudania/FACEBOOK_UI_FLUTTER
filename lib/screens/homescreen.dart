@@ -1,11 +1,15 @@
-import 'package:flutter/services.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// ignore_for_file: prefer_const_constructors, avoid_print
 
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+// import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:myapp/config/palette.dart';
 
+import '../widgets/widgets.dart';
+
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   // const HomeScreen({super.key});
 
   @override
@@ -27,11 +31,15 @@ class HomeScreen extends StatelessWidget {
           ),
           floating: true,
           actions: [
-            IconButton(
-              icon: Icon(Icons.search),
+            CircleButton(
+              icon: Icons.search,
               iconSize: 30.0,
-              color: Colors.black,
-              onPressed: () {},
+              onPressed: () => print('Search'),
+            ),
+            CircleButton(
+              icon: Icons.messenger,
+              iconSize: 30.0,
+              onPressed: () => print('Search'),
             )
           ],
         )
